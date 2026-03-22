@@ -1,0 +1,157 @@
+/* =========================================
+   IMPORTACIÓN DE FUENTES Y COLORES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --orange: #FF5C2A; /* Naranja Democratizando */
+    --dark: #0a0a0a;   /* Fondo negro elegante */
+    --light: #f4f4f4;  /* Texto blanco */
+    --gray: #888888;   /* Texto secundario gris */
+}
+
+body, html {
+    margin: 0; padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+/* =========================================
+   IMAGEN DE FONDO (SOLO SE VE EN INICIO)
+   ========================================= */
+.bg-image {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN GENERAL
+   ========================================= */
+.top-nav {
+    display: flex; justify-content: space-between; align-items: center; padding: 30px 50px;
+}
+
+.solid-nav {
+    background-color: var(--dark);
+    border-bottom: 1px solid #222;
+}
+
+.nav-logo {
+    font-size: 20px; font-weight: 800; color: var(--light); text-decoration: none; letter-spacing: 2px;
+}
+.nav-logo span { color: var(--orange); }
+
+.nav-links a {
+    color: var(--gray); text-decoration: none; margin-left: 30px;
+    font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--light); }
+
+/* =========================================
+   DISEÑO EXCLUSIVO DE LA PÁGINA DE INICIO
+   ========================================= */
+.texto-logo-gigante {
+    font-size: 50px; font-weight: 800; margin-bottom: 20px; letter-spacing: 3px;
+}
+.naranja { color: var(--orange); }
+
+.hero-minimal {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: calc(100vh - 200px); text-align: center; padding: 0 20px;
+}
+
+.tagline {
+    font-size: 18px; font-weight: 300; color: var(--gray); max-width: 600px; margin-bottom: 40px; line-height: 1.6;
+}
+
+.link-sutil {
+    color: var(--orange); text-decoration: none; font-size: 14px; text-transform: uppercase;
+    letter-spacing: 1px; border-bottom: 1px solid transparent; padding-bottom: 5px; transition: 0.3s ease;
+}
+.link-sutil:hover { border-bottom: 1px solid var(--orange); color: var(--light); }
+
+/* =========================================
+   REDES SOCIALES (INICIO)
+   ========================================= */
+.social-links-home {
+    position: absolute; bottom: 80px; width: 100%;
+    display: flex; justify-content: center; gap: 20px; z-index: 900;
+}
+
+.social-icon { text-decoration: none; transition: transform 0.3s ease; }
+.social-icon:hover { transform: translateY(-3px); }
+
+.social-placeholder {
+    width: 40px; height: 40px; border: 1px solid var(--gray); border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--light); font-size: 12px; font-weight: 600;
+}
+
+/* =========================================
+   DISEÑO EXCLUSIVO PARA ARCHIVO DE TRABAJOS
+   ========================================= */
+.content-page {
+    max-width: 1000px; margin: 80px auto; padding: 0 20px; min-height: 60vh;
+}
+
+.page-title { 
+    font-size: 32px; font-weight: 300; margin-bottom: 15px; 
+}
+
+.page-desc { 
+    color: var(--gray); margin-bottom: 50px; font-weight: 300; line-height: 1.6; max-width: 700px; 
+}
+
+/* Tabla de la base de datos */
+.table-container { width: 100%; overflow-x: auto; }
+
+.minimal-table { width: 100%; border-collapse: collapse; text-align: left; }
+
+.minimal-table th {
+    padding: 15px 0; border-bottom: 1px solid #444; color: var(--orange);
+    font-weight: 400; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+}
+
+.minimal-table td {
+    padding: 20px 0; border-bottom: 1px solid #222; color: #ccc; font-weight: 300; font-size: 15px;
+}
+
+.link-text { 
+    color: var(--gray); text-decoration: none; font-size: 13px; text-transform: uppercase; transition: color 0.3s; 
+}
+.link-text:hover { color: var(--orange); }
+
+/* =========================================
+   FOOTER (PIE DE PÁGINA NORMAL Y FLOTANTE)
+   ========================================= */
+/* Footer Normal (Para la página de archivo) */
+footer { 
+    background-color: var(--dark); text-align: center; padding: 40px 20px; 
+    margin-top: 40px; border-top: 1px solid #222;
+}
+
+footer .footer-info p {
+    color: #e0e0e0; font-size: 14px; font-weight: 300; margin: 8px 0;
+}
+
+footer .footer-info strong {
+    color: var(--orange); font-size: 15px; font-weight: 600; letter-spacing: 1px;
+}
+
+/* Footer Flotante (Exclusivo para la Portada/Inicio) */
+.footer-inicio {
+    position: absolute; bottom: 0; width: 100%;
+    background-color: transparent !important; border-top: none !important;
+    padding: 20px 0 !important; margin: 0 !important; text-align: center;
+}
+
+.footer-inicio .footer-info p {
+    color: #ffffff !important; font-size: 13px !important; margin: 5px 0 !important; font-weight: 300;
+}
+
+.footer-inicio .footer-info strong {
+    color: var(--orange) !important; font-size: 14px !important; font-weight: 600; letter-spacing: 1px;
+}
